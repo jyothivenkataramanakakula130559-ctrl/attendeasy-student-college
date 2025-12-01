@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { GraduationCap, LogOut, Users, ClipboardList, UserPlus, FileText, History } from "lucide-react";
+import { GraduationCap, LogOut, Users, ClipboardList, UserPlus, FileText, History, BarChart3 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
@@ -57,6 +57,12 @@ export const Navbar = () => {
               <Link to="/history" className="flex items-center gap-2">
                 <History className="h-4 w-4" />
                 History
+              </Link>
+            </Button>
+            <Button variant="ghost" size="sm" asChild>
+              <Link to="/analytics" className="flex items-center gap-2">
+                <BarChart3 className="h-4 w-4" />
+                Analytics
               </Link>
             </Button>
             <Button variant="outline" size="sm" onClick={handleLogout}>
